@@ -4,7 +4,7 @@
 <section id="summary" class="grid cards"></section><section id="progress" class="grid bars"></section>
 <section class="panel"><h2>Website tree</h2><div id="tree" class="tree"></div></section>
 <section class="panel"><h2>Pages</h2><div class="controls"><input id="search" placeholder="Search page, URL, keyword, or notes" size="42"><span id="filters"></span></div><table><thead><tr><th>Page</th><th>URL</th><th>Section</th><th>Primary keyword</th><th>Priority</th><th>Audit</th><th>Rewrite</th><th>QA</th><th>Links</th><th>Published</th><th>Audit file</th><th>Last updated</th><th>Next action</th><th>Notes</th></tr></thead><tbody id="rows"></tbody></table></section>
-</main><script src="data.js"></script><script>
+</main><script src="/seo-overhaul-dashboard/data.js"></script><script>
 const data=window.SEO_OVERHAUL_DATA, pages=data.pages; const steps=['audit','rewrite','qa','internalLinks','published']; let filter='all', query='';
 const nice=s=>({not_started:'Not started',in_progress:'In progress',done:'Done',blocked:'Blocked',skipped:'Skipped'}[s]||s); const badge=(s,t)=>`<span class="badge ${s}">${t||nice(s)}</span>`;
 function pct(n,d){return d?Math.round(n/d*100):0} function done(p,k){return p.status[k]==='done'} function blocked(p){return steps.some(k=>p.status[k]==='blocked')}

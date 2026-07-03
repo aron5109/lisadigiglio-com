@@ -137,3 +137,23 @@ If parsing fails, the audit file is still listed and the audit step is still mar
 - Browser changes do not write back to GitHub or the tracker file.
 - Permanent updates require editing `content/seo-overhaul-tracker.json`, regenerating data, and committing the change.
 - Audit matching is heuristic. If a file does not match automatically, set the page's `auditFile` field in the tracker to the audit file name.
+
+## Deploying on Vercel
+
+Use the Vercel project settings below to deploy this repository as a simple static app:
+
+- Framework Preset: Other
+- Root Directory: `./`
+- Build Command: `npm run build`
+- Output Directory: `.`
+- Dashboard URL: `/`
+- Backup dashboard URL: `/seo-overhaul-dashboard/`
+
+The root dashboard route is handled by `vercel.json`, which rewrites `/` to `seo-overhaul-dashboard/index.html`. The backup URL remains available directly from the generated static dashboard folder.
+
+To update statuses:
+
+1. Edit `content/seo-overhaul-tracker.json`.
+2. Run `npm run generate:seo-dashboard`.
+3. Commit the tracker and generated dashboard data changes.
+4. Vercel auto-deploys from GitHub.

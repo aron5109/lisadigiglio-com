@@ -16,6 +16,12 @@ The generator writes:
 
 - `src/data/seo-overhaul.generated.json` — generated data for tooling/review.
 - `seo-overhaul-dashboard/data.js` — generated browser data loaded by the static dashboard.
+- `seo-overhaul-dashboard/index.html` — source dashboard HTML kept for direct local review.
+- `public/index.html` — Vercel static output for `/` and `/dashboard`.
+- `public/data.js` — generated browser data for the root dashboard.
+- `public/seo-overhaul-dashboard/index.html` — Vercel static output for `/seo-overhaul-dashboard/`.
+- `public/seo-overhaul-dashboard/data.js` — generated browser data for the nested dashboard route.
+- `public/docs/audits/` — copied audit Markdown files for dashboard links.
 
 ## How audit files are detected
 
@@ -100,7 +106,7 @@ Add a new object to `content/seo-overhaul-tracker.json` with:
 - `notes`
 - `nextAction`
 
-Then run `npm run generate:seo-dashboard`.
+Then run `npm run build`.
 
 ## How to add a new audit file
 
@@ -140,20 +146,26 @@ If parsing fails, the audit file is still listed and the audit step is still mar
 
 ## Deploying on Vercel
 
-Use the Vercel project settings below to deploy this repository as a simple static app:
+Settings:
 
 - Framework Preset: Other
 - Root Directory: `./`
 - Build Command: `npm run build`
-- Output Directory: `.`
-- Dashboard URL: `/`
-- Backup dashboard URL: `/seo-overhaul-dashboard/`
+- Output Directory: `public`
+- Install Command: `npm install`
 
-The root dashboard route is handled by `vercel.json`, which rewrites `/` to `seo-overhaul-dashboard/index.html`. The backup URL remains available directly from the generated static dashboard folder.
+Dashboard URLs:
 
-To update statuses:
+- `/`
+- `/dashboard`
+- `/seo-overhaul-dashboard/`
+
+The Vercel build writes the static app into `public/`, and `vercel.json` serves that folder as the deployment output. The root and `/dashboard` routes use `public/index.html`; `/seo-overhaul-dashboard/` uses `public/seo-overhaul-dashboard/index.html`.
+
+To update progress:
 
 1. Edit `content/seo-overhaul-tracker.json`.
-2. Run `npm run generate:seo-dashboard`.
-3. Commit the tracker and generated dashboard data changes.
-4. Vercel auto-deploys from GitHub.
+2. Add new audit Markdown files to `docs/audits/`.
+3. Run `npm run build`.
+4. Commit changes.
+5. Vercel auto-deploys.

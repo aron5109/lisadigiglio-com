@@ -1,15 +1,19 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
-  "outputDirectory": ".",
+  "outputDirectory": "public",
   "cleanUrls": true,
   "rewrites": [
     {
       "source": "/",
-      "destination": "/seo-overhaul-dashboard/index.html"
+      "destination": "/index.html"
     },
     {
       "source": "/dashboard",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/seo-overhaul-dashboard",
       "destination": "/seo-overhaul-dashboard/index.html"
     }
   ],

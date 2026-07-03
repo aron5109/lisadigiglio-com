@@ -1,0 +1,1 @@
+{"scripts":{"generate:seo-dashboard":"node scripts/generate-seo-dashboard.mjs","build":"npm run generate:seo-dashboard"},"devDependencies":{}}

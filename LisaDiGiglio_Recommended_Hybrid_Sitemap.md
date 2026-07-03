@@ -1,0 +1,52 @@
+# Lisa DiGiglio Recommended Hybrid Sitemap
+
+- Home
+- Portfolio
+  - Featured Elopements
+  - Summer Elopements
+  - Winter Elopements
+  - Adventure Elopements
+  - Full Elopement Stories
+- About
+  - Iceland Elopement Photographer
+- Experience
+  - The Process
+  - Planning Together
+  - Timeline Creation
+  - Weather & Backup Plans
+  - Travel Assistance
+  - What To Expect
+- Investment
+  - Custom Collections
+  - What's Included
+  - Why Invest In An Experience
+  - Frequently Asked Questions
+- Iceland Elopement Locations
+  - Reykjavik Elopements
+  - Vik Elopements
+  - South Coast Elopements
+  - Golden Circle Elopements
+  - Glacier Lagoon Elopements
+  - Snæfellsnes Elopements
+  - Reykjanes Elopements
+  - Waterfall Elopements
+- Planning Your Elopement
+  - How To Elope In Iceland
+  - Iceland Elopement Cost Guide
+  - Best Places To Elope In Iceland
+  - What To Wear
+  - Legal Marriage Requirements
+  - Witnesses In Iceland
+  - Helicopter Elopements
+  - Best Time Of Year To Elope
+  - Iceland Weather Guide
+  - Packing Guide
+  - Elopement Planning Checklist
+- FAQ
+- Contact
+- Blog / Journal
+  - Real Elopement Stories
+  - Location Guides
+  - Planning Advice
+  - Seasonal Guides
+  - Iceland Travel Tips
